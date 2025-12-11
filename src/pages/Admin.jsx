@@ -13,7 +13,7 @@ const Admin = () => {
 
   // Fetch posts for selected page
   const fetchPosts = () => {
-    fetch(`https://blog-production-cfe2.up.railway.app/api/posts/${form.pageName}`)
+    fetch(`${import.meta.env.VITE_API_URL}/posts/${form.pageName}`)
       .then(res => res.json())
       .then(data => setPosts(data));
   };
@@ -28,8 +28,8 @@ const Admin = () => {
 
     const method = editingId ? "PUT" : "POST";
     const url = editingId
-      ? `https://blog-production-cfe2.up.railway.app/api/posts/${editingId}`
-      : `https://blog-production-cfe2.up.railway.app/api/posts`; // backend POST route
+      ? `${import.meta.env.VITE_API_URL}/posts/${editingId}`
+      : `${import.meta.env.VITE_API_URL}/posts`; // backend POST route
 
     // Use FormData to handle optional image upload
     const formData = new FormData();
@@ -60,7 +60,7 @@ const res = await fetch(url, {
 
   // Handle delete
   const handleDelete = (id) => {
-    fetch(`https://blog-production-cfe2.up.railway.app/api/posts/${id}`, { method: "DELETE" })
+    fetch(`${import.meta.env.VITE_API_URL}/posts/${id}`, { method: "DELETE" })
       .then(res => res.json())
       .then(fetchPosts);
   };

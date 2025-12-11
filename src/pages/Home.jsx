@@ -8,7 +8,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://blog-production-cfe2.up.railway.app/api/posts/Home")
+    fetch(`${import.meta.env.VITE_API_URL}/posts/Home`)
       .then(res => res.json())
       .then(data => setPosts(data));
   }, []);
