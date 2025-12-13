@@ -20,7 +20,7 @@ const Home = () => {
     fontSize: "2.5rem",
     color: "#333",
     textAlign: "center",
-    margin: "40px 0",
+    margin: "30px 0",
     transition: "transform 0.3s ease, color 0.3s ease",
     cursor: "default"
   }}
