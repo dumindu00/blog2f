@@ -6,8 +6,10 @@ import Home from './pages/Home'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import RootLayout from './layout/RootLayout'
 import Join from './pages/Join';
+import AdminLogin from './pages/AdminLogin';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import AdminProtectedRoute from './components/AdminProtectedRoute';
 
 
 
@@ -26,8 +28,13 @@ function App() {
           <Route path='join' element={<Join />} />
           
           <Route path='contact' element={<Contact/>} />
-          <Route path='admin' element={<Admin />} />
+          <Route path='admin' element={
+                        <AdminProtectedRoute>
+                                      <Admin />
+                        </AdminProtectedRoute>
+  } />
 
+          <Route path="/admin-login" element={<AdminLogin />} />
         
         </Route>
         

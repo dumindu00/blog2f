@@ -39,10 +39,16 @@ const Admin = () => {
     formData.append("link", form.link);
     if (imageFile) formData.append("image", imageFile);
 
+const token = localStorage.getItem("adminToken");
+
 const res = await fetch(url, {
   method: editingId ? "PUT" : "POST",
-  body: formData // <-- DO NOT set headers manually
+  body: formData,
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
 });
+
 
     await res.json();
 
@@ -60,7 +66,15 @@ const res = await fetch(url, {
 
   // Handle delete
   const handleDelete = (id) => {
-    fetch(`${import.meta.env.VITE_API_URL}/posts/${id}`, { method: "DELETE" })
+    const token = localStorage.getItem("adminToken");
+
+      fetch(`${import.meta.env.VITE_API_URL}/posts/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+
       .then(res => res.json())
       .then(fetchPosts);
   };
