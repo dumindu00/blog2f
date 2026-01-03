@@ -1,6 +1,6 @@
 
 import './App.css'
-import About from './pages/About'
+import MyProjects from './pages/MyProjects'
 import Findmore from './pages/Findmore'
 import Home from './pages/Home'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
@@ -23,7 +23,7 @@ function App() {
 
             <Route path='findmore' element={<Findmore />} />
 
-          <Route path='about' element={<About />} />
+          <Route path='myprojects' element={<MyProjects />} />
 
           <Route path='join' element={<Join />} />
           

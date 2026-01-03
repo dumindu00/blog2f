@@ -103,7 +103,7 @@ const res = await fetch(url, {
         >
           <option value="Home">Home</option>
           <option value="FindMore">FindMore</option>
-          <option value="About">About</option>
+          <option value="MyProjects">MyProjects</option>
         </select>
       </div>
 

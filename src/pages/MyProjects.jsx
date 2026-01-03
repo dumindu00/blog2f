@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Card from '../components/Card'
 
-const About = () => {
+const MyProjects = () => {
 
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/posts/About`)
+    fetch(`${import.meta.env.VITE_API_URL}/posts/MyProjects`)
       .then(res => res.json())
       .then(data => setPosts(data));
   }, []);
@@ -54,4 +54,4 @@ const About = () => {
   )
 }
 
-export default About
+export default MyProjects
