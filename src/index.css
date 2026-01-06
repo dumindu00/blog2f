@@ -103,23 +103,39 @@ body {
 
 /* css for About */
 
-.about {
+/* .about {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 100px;
   gap: 20px;
+} */
+
+
+
+
+/* About container */
+.about {
+  column-count: 3;           /* Number of columns (max 3 per row) */
+  column-gap: 20px;          /* Space between columns */
+  padding: 20px 10px;
 }
 
+.about .card {
+  display: inline-block;     /* Important for masonry */
+  width: 100%;               /* Take full column width */
+  margin-bottom: 20px;       /* Space between cards vertically */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
+.about .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
 
 
