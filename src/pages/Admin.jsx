@@ -162,6 +162,21 @@ const res = await fetch(url, {
           </li>
         ))}
       </ul>
+
+
+
+      <button
+  onClick={() => {
+    localStorage.removeItem("adminToken");
+    window.location.href = "/admin-login"; // redirect to login
+  }}
+>
+  Logout
+</button>
+
+
+
+
     </div>
   );
 };
