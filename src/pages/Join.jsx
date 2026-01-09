@@ -69,7 +69,7 @@ const Join = () => {
                   
                   <a href="https://github.com/dumindu00"> 
 
-                  <img src="/public/github.png" alt="" />
+                  <img src="/public/github.svg" alt="" />
 
                       <p>Visit My Github Profile</p>
                       
