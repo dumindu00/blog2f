@@ -58,7 +58,25 @@ const Join = () => {
        onMouseLeave={e => e.currentTarget.style.backgroundColor = "#fff"}
     >
       📞 <span>Phone: 0787848596</span>
+
     </p>
+
+          <p style={{
+            display: "inline-block",
+            justifyContent: "flex-start"
+          }}>
+                <span>
+                  
+                  <a href="https://github.com/dumindu00"> 
+
+                  <img src="/public/github.png" alt="" />
+
+                      <p>Visit My Github Profile</p>
+                      
+                    </a>
+
+                  </span>
+          </p>
   </div>
 </section>
 

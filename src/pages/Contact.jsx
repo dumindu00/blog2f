@@ -14,6 +14,7 @@ const Contact = () => {
       <div>
         Contact No: 045050505
         Email: jonedoe@gmail.com
+        Github: https://github.com/dumindu00
       </div>
       </div>
     </div>
